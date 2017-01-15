@@ -1,0 +1,53 @@
+.menu {
+	padding: 2rem;
+	background: $tan;
+	border: 10px solid $blue;
+
+	.menu__course {
+		margin-bottom: 2rem;
+		text-align: center;
+
+		.wrapper {
+			max-width: 30rem;
+			margin: 0 auto;
+		}
+
+		h1 {
+			@include font('sutro-open-fill', 400);
+			font-size: 1.4em;
+		}
+	}
+
+	.optionseperator {
+		color: $orange;
+		@include font("brim-narrow-combined-2", 400);
+	}
+
+	footer {
+		text-align: center;
+	}
+}
+
+
+
+.restaurant--summary {
+	margin-bottom: 2rem;
+	text-align: center;
+
+	.restaurant__name {
+		margin-bottom: 0;
+	}
+
+	.restaurant__phone,
+	.restaurant__address {
+		display: inline-block;
+	}
+
+	.restaurant__phone {
+		margin-right: 1em;
+	}
+
+	.restaurant__address {
+
+	}
+}

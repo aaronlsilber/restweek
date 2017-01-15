@@ -1,0 +1,24 @@
+{
+  "name": "falcor",
+  "version": "0.0.0",
+  "homepage": "https://github.com/aaronlsilber/falcor",
+  "authors": [
+    "Aaron Silber <aaron.silber@omniperforms.com>"
+  ],
+  "description": "Starter Drupal theme by Aaron Silber at Omni Strategic Technologies.",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "FitText.js": "~1.2.0",
+    "fitvids": "^1.2.0"
+  },
+  "devDependencies": {
+    "bourbon": "~4.2.3"
+  }
+}

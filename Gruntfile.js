@@ -35,7 +35,7 @@ module.exports = function( grunt ) {
     uglify: {
       modernizr: {
         files: {
-          'src/components/modernizr/modernizr.min.js': ['src/components/modernizr/modernizr.js']
+          'src/js/modernizr.min.js': ['src/components/modernizr/modernizr.js']
         }
       },
       js: {

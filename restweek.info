@@ -9,7 +9,7 @@ screenshot = dist/img/screenshot.png
 stylesheets[all][] = src/css/style.min.css
 
 ;Libraries
-scripts[] = src/components/modernizr/modernizr.min.js
+scripts[] = src/js/modernizr.min.js
 
 ;Plugins
 plugins[panels][layouts] = panels_layouts

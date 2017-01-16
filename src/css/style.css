@@ -2889,8 +2889,12 @@ body {
  * Base
  */
 .btn {
-  padding: 0.3em 0.5em 0.5em;
-  border-radius: 3px; }
+  padding: 0.3em 0.5em;
+  border-radius: 3px;
+  border: 1px solid #dd6235;
+  color: #dd6235; }
+  .btn:hover {
+    background: white; }
 
 /*
  * Theme

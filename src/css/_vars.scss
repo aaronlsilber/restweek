@@ -63,9 +63,9 @@ $responsive-pull:   false!default;
 /**
  * Tell inuit.css when breakpoints start.
  */
-$lap-start:         35em!default;
-$desk-start:        54em!default;
-$desk-wide-start: 	70em!default;
+$lap-start:         45em!default;
+$desk-start:        74em!default; // 1186
+$desk-wide-start: 	1200px!default;
 
 $gutter-width: 		$base-line-height!default;
 $max-width: 		$desk-wide-start!default;
@@ -118,6 +118,13 @@ $close-quote:   null;
 $blue: 				#205798;
 $orange: 			#dd6235;
 $tan: 				#eddeb7;
+// 2018
+$pink:              #fccfbc;
+$salmon:            #ef3b40;
+$purple-light:      #dbdfea;
+$purple-gray:       #6f7791;
+$purple:            #253b7e;
+$yellow:            #ffc709;
 
 /**
  * inuit.css will work these next ones out for you.

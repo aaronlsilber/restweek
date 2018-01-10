@@ -1,7 +1,23 @@
-.menu {
+.node.menu {
 	padding: 2rem;
-	background: $tan;
-	border: 10px solid $blue;
+	background: white;
+	background-image: 
+		url('../img/oven-horiz-line.png'),
+		url('../img/oven-horiz-line.png'),
+		url('../img/oven-vert-line.jpg'),
+		url('../img/oven-vert-line.jpg');
+
+	background-repeat: 
+		repeat-x,
+		repeat-x,
+		repeat-y,
+		repeat-y;
+
+	background-position: 
+		top -5px center,
+		bottom -5px center,
+		left -3px center,
+		right -5px center;
 
 	.menu__course {
 		margin-bottom: 2rem;
@@ -13,14 +29,12 @@
 		}
 
 		h1 {
-			@include font('sutro-open-fill', 400);
 			font-size: 1.4em;
 		}
 	}
 
 	.optionseperator {
 		color: $orange;
-		@include font("brim-narrow-combined-2", 400);
 	}
 
 	footer {

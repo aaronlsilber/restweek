@@ -11,6 +11,30 @@
  * Theme
  */
 
+ 	.block--ovenpart {
+		width: 82.5vw;
+		max-width: 1007px;
+		margin: 0 auto;
+		padding: 10px;
+		background-color: white;
+		background-image:
+			url('../img/oven-border-left.jpg'),
+			url('../img/oven-border-right.jpg');
+		background-repeat: repeat-y, repeat-y;
+		background-position: left -5px top, right -5px top;
+		background-position: left -0.5vw top,right -0.5vw top;
+		background-size: 1.3vw;
+
+		@include media-query(lap) {
+			width: 83.8vw;
+		}
+
+		@include media-query(desk) {
+			background-position: left -5px top,right -5px top;
+			background-size: 0.8vw;
+		}
+	}
+
 /* 
  * Unique
  */
@@ -44,58 +68,34 @@
  	}
 
 
-	.block--billboard {
-		border-top: 10px solid $blue;
-
-		img {
-			width: 100%;
-			height: auto;
-			vertical-align: middle;
-		}
-
-		.region-one {
-			width: 36%;
-			
-			@include media-query(desk) {
-				width: 16%;
-			}
-		}
-
-		.region-two {
-			
-			@include media-query(desk) {
-				width: 55%;
-			}
-		}
-
-		.region-three {
-			width: 28%;
-			
-			@include media-query(desk) {
-				width: 13%;
-			}
-		}
-
-		.region-four {
-			width: 36%;
-
-			@include media-query(desk) {
-				width: 16%;
-			}
-		}
+	.block--header {
+		img { display: block; vertical-align: middle; }
 	}
 
 
-	.block--restaurants {
-		padding: 1rem;
-		border-top: 10px solid $blue;
+	#featured-video {
+		padding: 10px 20px;
+	}
 
+
+	#restaurants {
+		position: relative;
+		padding: 0 3px;
+
+		.view {
+			padding: 10px 0 0;
+			background: url('../img/oven-horiz-line.png') repeat-x center top;
+		}
+		
 		.view-header {
-			padding-bottom: 1rem;
-			margin-bottom: 1rem;
+			padding: 40px 1rem 1rem;
 			text-align: center;
+			font-size: 1.2rem;
 			color: $orange;
-			border-bottom: 10px solid;
+
+			@include media-query(lap-and-up) {
+				background: url('../img/oven-vert-line.jpg') repeat-y right -4px top;
+			}
 
 			h1 {
 				color: $blue;
@@ -108,77 +108,45 @@
 			}
 		}
 
+		#year-mark {
+			margin-top: 1rem;
+		}
+
 		.view-content {
-			font-size: 1.6rem;
-			text-align: center;
+			display: block;
+			padding: 60px 1rem 1rem;
 
-			@include media-query(lap) {
+			font-size: 1.2rem;
+			background: url('../img/oven-horiz-line.png') no-repeat top center;
 
+			@include media-query(lap-and-up) {
+				padding-top: 80px;
+				padding-top: 7vw;
+
+				font-size: 1.5rem;
+
+				background: url('../img/oven-door-pull.jpg') no-repeat top 20px center;
+				background-size: 80% auto;
 			}
 
 			@include media-query(desk) {
 				font-size: 1.9rem;
-				text-align: justify;
-				text-align-last: justify;
 			}
 		}
 
 		.restaurant--title {
-			display: block;
-			font-family: "concave-tuscan";
-			font-weight: 400;
-
-			@include media-query(lap) {
-				
-			}
-
-			@include media-query(desk) {
-				display: inline-block;
-			}
-
-			&:nth-child(odd) {
-				font-family: "balboa-plus-fill";
-			}
-
-			&:nth-child(3n) {
-				font-family: "sutro-open-fill";
-			}
-
-			&:nth-child(4n) {
-				font-family: "brim-narrow-combined-2";
-			}
-
-			/**
-			 Type Trumps
-			 */
-			&:nth-child(5),
-			&:nth-child(14),
-			&:nth-child(15) {
-				font-family: "concave-tuscan";
-			}
-
-			&:nth-child(7),
-			&:nth-child(17) {
-				font-family: "sutro-open-fill";
-			}
-
-			&:nth-child(9) {
-				font-family: "balboa-plus-fill";
-			}
-
-			// &:nth-child(15) {
-			// 	font-family: "brim-narrow-combined-2";
-			// }
+			@include font('hwt');
 
 			&:hover {
 
 				a {
-					color: $orange;
+					color: darken($salmon, 10%);
 				}
 			}
 
 			a {
-				color: $blue;
+				padding: 0 5px;
+				color: $salmon;
 				text-decoration: none;
 			}
 		}
@@ -193,16 +161,11 @@
 	}
 
 	.block--footer {
-		padding: 1rem;
-		
-		.sponsor {
-			vertical-align: middle;
-    		text-align: center;
+		position: relative;
 
-    		img {
-    			display: inline-block;
-    			vertical-align: middle;
-    		}
+		img {
+			display: block;
+			vertical-align: middle;
 		}
 	}
 

@@ -33,6 +33,7 @@
 
 	.l-contain {
 		max-width: $max-width;
+		max-width: 83vw;
 		margin: 0 auto;
 
 		padding: 0 $gutter-width/2;
@@ -104,20 +105,17 @@
 
 	body {
 		color: $blue;
+		background: darken($pink, 5%);
 		
 		@include media-query(desk) {
-			padding-top: 4rem;
-			padding-bottom: 4rem;
-
-			background: url('../img/bg_orange.gif') repeat center;
+			padding-bottom: 4rem;			
 		}
 	}
 
 	.page {
 		max-width: $desk-start;
 		margin: 0 auto;
-		border: 10px solid $blue;
-		background: $tan;
+		background: $pink;
 	}
 
 /*

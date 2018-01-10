@@ -83,7 +83,7 @@
  * the nesting of the generated HTML.
  */
 #cboxOverlay {
-  background: $orange;
+  background: $salmon;
 }
 #colorbox {
   outline: 0;
@@ -124,10 +124,8 @@
       #cboxCurrent {
         position: absolute;
         bottom: 3px;
-        left: 145px;
+        left: 90px;
         color: $orange;
-
-        @include font('sutro-open-fill', 400);
       }
       .cboxSlideshow_on #cboxSlideshow {
         position: absolute;
@@ -139,7 +137,7 @@
         text-indent: -9999px;
       }
       .cboxSlideshow_on #cboxSlideshow:hover {
-        background-position: -101px -50px;
+        // background-position: -101px -50px;
       }
       .cboxSlideshow_off #cboxSlideshow {
         position: absolute;
@@ -151,47 +149,37 @@
         text-indent: -9999px;
       }
       .cboxSlideshow_off #cboxSlideshow:hover {
-        background-position: -49px -50px;
+        // background-position: -49px -50px;
       }
       #cboxPrevious {
         position: absolute;
         bottom: 3px;
         left: 5px;
-        text-indent: -9999px;
-
-        width: 60px;
+        width: 34px;
         height: 24px;
 
-        html.svg & {
-          background: url(../img/sprite.svg) no-repeat 0 0;
-        }
-
-        html:not(.svg) & {
-          background: url(../img/sprite.png) no-repeat 0 0;
-        }
+        text-indent: -9999px;
+        background: url(../img/icon--prev.jpg) no-repeat;
       }
       #cboxPrevious:hover {
-        background-position: -75px -25px;
+        opacity: 0.8;
+        transform: translateY(-1px);
+        // background-position: -75px -25px;
       }
       #cboxNext {
         position: absolute;
         bottom: 3px;
-        left: 75px;
-        text-indent: -9999px;
-
-        width: 60px;
+        left: 45px;
+        width: 34px;
         height: 24px;
 
-        html.svg & {
-          background: url(../img/sprite.svg) no-repeat -70px 0;
-        }
-
-        html:not(.svg) & {
-          background: url(../img/sprite.png) no-repeat -70px 0;
-        }
+        text-indent: -9999px;
+        background: url(../img/icon--next.jpg) no-repeat;
       }
       #cboxNext:hover {
-        background-position: -50px -25px;
+        opacity: 0.8;
+        transform: translateY(-1px);
+        // background-position: -50px -25px;
       }
       #cboxLoadingOverlay {
         background: #fff;
@@ -211,11 +199,10 @@
         width: 22px;
         height: 22px;
 
-        html.svg & {
-          background: url(../img/sprite.svg) no-repeat -140px 0;
-        }
+        background: url(../img/icon--close.jpg) no-repeat;
 
-        html:not(.svg) & {
-          background: url(../img/sprite.png) no-repeat -140px 0;
+        &:hover {
+          transform: translateY(-1px);
+          opacity: 0.8;
         }
       }

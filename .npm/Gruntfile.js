@@ -16,17 +16,17 @@ module.exports = function( grunt ) {
 
     clean: {
       dist: {
-        src: ['dist']
+        src: ['../dist']
       },
     },
 
     concat: {
       js: {
         files: {
-          'src/js/scripts.min.js': [
-            'src/components/matchHeight/jquery.matchHeight-min.js',
-            'src/components/fitvids/jquery.fitvids.js',
-            'src/js/scripts.js'
+          '../src/js/scripts.min.js': [
+            '../src/components/matchHeight/dist/jquery.matchHeight-min.js',
+            '../src/components/fitvids/jquery.fitvids.js',
+            '../src/js/scripts.js'
           ]
         }
       }
@@ -35,12 +35,12 @@ module.exports = function( grunt ) {
     uglify: {
       modernizr: {
         files: {
-          'src/js/modernizr.min.js': ['src/components/modernizr/modernizr.js']
+          '../src/js/modernizr.min.js': ['../src/components/modernizr/modernizr.js']
         }
       },
       js: {
-        src: ['src/js/scripts.min.js'],
-        dest: 'src/js/scripts.min.js'
+        src: ['../src/js/scripts.min.js'],
+        dest: '../src/js/scripts.min.js'
       }
     },
 
@@ -54,7 +54,7 @@ module.exports = function( grunt ) {
           middleware: function( connect ) {
             return [
               lrSnippet,
-              mountFolder(connect, './src')
+              mountFolder(connect, '../src')
             ];
           }
         }
@@ -64,13 +64,13 @@ module.exports = function( grunt ) {
     copy: {
       dist: {
         files: [
-          { expand: true, cwd: 'src', src: ['*'], dest: 'dist' },
-          { expand: true, cwd: 'src', src: ['css/style.min.css'], dest: 'dist' },
-          { expand: true, cwd: 'src', src: ['img/**'], dest: 'dist' },
-          { expand: true, cwd: 'src', src: ['js/scripts.min.js'], dest: 'dist' },
-          { expand: true, cwd: 'src', src: ['util/**'], dest: 'dist' },
-          { expand: true, cwd: 'src', src: ['components/modernizr/modernizr.min.js'], dest: 'dist' },
-          { expand: true, cwd: 'src', src: ['content/**'], dest: 'dist' },
+          { expand: true, cwd: '../src', src: ['*'], dest: '../dist' },
+          { expand: true, cwd: '../src', src: ['css/style.min.css'], dest: '../dist' },
+          { expand: true, cwd: '../src', src: ['img/**'], dest: '../dist' },
+          { expand: true, cwd: '../src', src: ['js/scripts.min.js'], dest: '../dist' },
+          { expand: true, cwd: '../src', src: ['util/**'], dest: '../dist' },
+          { expand: true, cwd: '../src', src: ['components/modernizr/modernizr.min.js'], dest: '../dist' },
+          { expand: true, cwd: '../src', src: ['content/**'], dest: '../dist' },
         ],
       },
     },
@@ -78,8 +78,8 @@ module.exports = function( grunt ) {
     cssmin: {
       target: {
         files: [{
-          src: ['src/css/style.css'],
-          dest: 'src/css/style.min.css'
+          src: ['../src/css/style.css'],
+          dest: '../src/css/style.min.css'
         }]
       }
     },
@@ -92,24 +92,24 @@ module.exports = function( grunt ) {
 
     sass: {
       dev: {
-        src: ['src/css/style.scss'],
-        dest: 'src/css/style.css',
+        src: ['../src/css/style.scss'],
+        dest: '../src/css/style.css',
       },
     },
 
     watch: {
     	sass: {
-    		files: ['src/css/{,*/}*.scss'],
+    		files: ['../src/css/{,*/}*.scss'],
     		tasks: ['sass', 'cssmin'],
     	},
       js: {
-        files: ['src/js/{,*/}*.js'],
+        files: ['../src/js/{,*/}*.js'],
         tasks: ['concat', 'uglify'],
       },
       livereload: {
         files: [
-          'src/{,*/}*.html',
-          'src/{,*/}*.{css,js,png,jpg,gif,svg}'
+          '../src/{,*/}*.html',
+          '../src/{,*/}*.{css,js,png,jpg,gif,svg}'
         ],
         options: {
           livereload: LIVERELOAD_PORT

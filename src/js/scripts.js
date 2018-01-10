@@ -7,7 +7,6 @@
 		imgfill();
 
 		$('.js-matchheight').matchHeight();
-		$('.block--billboard .g').matchHeight();
 
 		$("body").fitVids();
 	}

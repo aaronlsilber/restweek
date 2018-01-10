@@ -4,13 +4,13 @@
  */
 
 	body {
-		@include font('ingra', 400);
+		@include font('skolar', normal)	;
 	}
 
 	/* Headings */
 
 	h1, h2, h3, h4, h5, h6 {
-		@include font('balboa-plus-fill', 400);
+		@include font('hwt');
 	}
 	
 	a {
@@ -27,7 +27,7 @@
 	}
 
 	.text--important {
-		@include font('sutro-open-fill', normal);
+
 	}
 
 /* 

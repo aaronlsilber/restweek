@@ -3,23 +3,16 @@
   $font-style:  $style;
   $fallbacks: sans-serif;
 
-  @if ($family == 'aviano') {
-    $family: 'aviano-sans';
-    $fallbacks: Verdana, Arial, sans-serif;
+  @if ($family == 'hwt') {
+    $family: 'hwt-artz';
+    $fallbacks: Arial, sans-serif;
+    $weight: 700;
+    $style: normal;
   }
 
-  @if ($family == 'blenny') {
-    $family: 'blenny';
-    $weight: 900;
-    $font-weight: 900;
-    $fallbacks: Verdana, Arial, sans-serif;
-  }
-
-  @if ($family == 'facit') {
-    $family: 'jaf-facitweb';
-    $weight: 300;
-    $font-weight: 300;
-    $fallbacks: Verdana, Arial, sans-serif;
+  @if ($family == 'skolar') {
+    $family: "skolar-sans-latin";
+    $fallbacks: Arial, sans-serif;
   }
  
   // Translate Weight
